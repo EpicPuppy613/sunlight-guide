@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 html {
-  
+    text-align: center;
+    font-family: 'Noto Sans Math', sans-serif;
+    background-color: black;
+    color: white;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 50%;
+}
+th, td {
+    width: 25%;
+    border: 2px solid white;
+    padding: 4px;
 }

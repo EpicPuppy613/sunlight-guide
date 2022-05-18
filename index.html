@@ -4,12 +4,93 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Page</title>
+	<title>Sunlight Travel Guide</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+	<link rel="stylesheet" href="/mathquill/mathquill.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="/mathquill/mathquill.js"></script>
+	<script>
+	var MQ = MathQuill.getInterface(2);
+	</script>
 </head>
 
 <body>
-
+	<h1>Sunlight Travel Guide: Portland, ME and Melbourne, Australia</h1>
+	<h2>Sunlight Data Table</h2>
+	<table id="data">
+		<tr>
+			<th>Date</th><th>Days since Dec. 31</th><th>Portland, ME<br>Daylight Hours</th><th>Melbourne, Australia<br>Daylight Hours</th>
+		</tr>
+		<tr>
+			<td>1/21/21</td><td>21</td><td>9.5</td><td>14.3</td>
+		</tr>
+		<tr>
+			<td>2/21/21</td><td>52</td><td>10.8</td><td>13.3</td>
+		</tr>
+		<tr>
+			<td>3/21/21</td><td>80</td><td>12.2</td><td>12.1</td>
+		</tr>
+		<tr>
+			<td>4/21/21</td><td>111</td><td>13.7</td><td>10.9</td>
+		</tr>
+		<tr>
+			<td>5/21/21</td><td>141</td><td>14.9</td><td>10.0</td>
+		</tr>
+		<tr>
+			<td>6/21/21</td><td>172</td><td>15.4</td><td>9.5</td>
+		</tr>
+		<tr>
+			<td>7/21/21</td><td>202</td><td>14.9</td><td>9.9</td>
+		</tr>
+		<tr>
+			<td>8/21/21</td><td>233</td><td>13.7</td><td>10.9</td>
+		</tr>
+		<tr>
+			<td>9/21/21</td><td>264</td><td>12.2</td><td>12.0</td>
+		</tr>
+		<tr>
+			<td>10/21/21</td><td>294</td><td>10.8</td><td>13.3</td>
+		</tr>
+		<tr>
+			<td>11/21/21</td><td>325</td><td>9.5</td><td>14.3</td>
+		</tr>
+		<tr>
+			<td>12/21/21</td><td>355</td><td>8.9</td><td>14.8</td>
+		</tr>
+	</table>
+	<h2>Sunlight Function</h2>
+	<div style="columns: 2;">
+	<h4 style="color: dodgerblue">Portland, ME</h4>
+	<span style="color: dodgerblue">
+		Amplitude: 3.25<br>
+		Period: 365<br>
+		Phase Shift: 80 right<br>
+		Midline: 12.15<br>
+	</span><br>
+	<strong style="color: dodgerblue">Sine Function:</strong><br>
+	<span class="math" style="color: dodgerblue;">p\left(x\right)=3.25\sin\left(\frac{2\pi}{365}\left(x-80\right)\right)+12.15</span><br>
+	<strong style="color: dodgerblue">Cosine Function:</strong><br>
+	<span class="math" style="color: dodgerblue;">q\left(x\right)=3.25\cos\left(\frac{2\pi}{365}\left(x-80\right)-\frac{\pi}{2}\right)+12.15</span>
+	<h4 style="color: crimson">Melbourne, Australia</h4>
+	<span style="color: crimson">
+		Amplitude: 2.65<br>
+		Period: 365<br>
+		Phase Shift: 264 right<br>
+		Midline: 12.15<br>
+	</span><br>
+	<strong style="color: crimson">Sine Function:</strong><br>
+	<span class="math" style="color: crimson;">m\left(x\right)=2.65\sin\left(\frac{2\pi}{365}\left(x-264\right)\right)+12.15</span><br>
+	<strong style="color: crimson">Cosine Function:</strong><br>
+	<span class="math" style="color: crimson;">n\left(x\right)=2.65\cos\left(\frac{2\pi}{365}\left(x-264\right)-\frac{\pi}{2}\right)+12.15</span>
+	</div>
+	<h2>Sunlight Graph</h2>
+	<h3>Key:</h3>
+	<p>
+		<div style="background-color: dodgerblue; width: 1.6em; height: 0.8em; display: inline-block; border: 1px solid white;"></div> Portland, ME<br>
+		<div style="background-color: crimson; width: 1.6em; height: 0.8em; display: inline-block; border: 1px solid white;"></div> Melbourne, Australia
+	</p>
+	<div id="graph" style="width: 50%; height: 600px; margin: auto;"></div>
 	<script src="script.js">
 	</script>
 </body>
