@@ -8,10 +8,32 @@ html {
 table {
     border-collapse: collapse;
     margin: auto;
-    width: 50%;
+    width: 75%;
 }
 th, td {
     width: 25%;
     border: 2px solid white;
     padding: 4px;
+}
+.blue {
+    color: dodgerblue;
+}
+.red {
+    color: crimson;
+}
+.yellow {
+    color: gold;
+}
+.green {
+    color: springgreen;
+}
+.orange {
+    color: orangered;
+}
+.purple {
+    color: mediumorchid;
+}
+#reflection {
+    width: 75%;
+    margin: auto;
 }
