@@ -17,10 +17,15 @@
 
 <body>
 	<h1>Sunlight Travel Guide: Portland, ME and Melbourne, Australia</h1>
-	<h2>Sunlight Data Table</h2>
+	<h2>Navigation</h2>
+	<li><a href="#nav-table">Data Table</a></li>
+	<li><a href="#nav-function">Functions</a></li>
+	<li><a href="#nav-graph">Graph</a></li>
+	<li><a href="#nav-reflection">Reflection</a></li>
+	<h2 id="nav-table">Daylight Hours in Portland, ME and Melbourne, Australia</h2>
 	<table id="data">
 		<tr>
-			<th>Date</th><th>Days since Dec. 31</th><th>Portland, ME<br>Daylight Hours</th><th>Melbourne, Australia<br>Daylight Hours</th>
+			<th>Date</th><th>Days from Dec. 31</th><th>Portland, ME<br>Daylight Hours</th><th>Melbourne, Australia<br>Daylight Hours</th>
 		</tr>
 		<tr>
 			<td class="blue">1/21/21</td><td>21</td><td>9.5</td><td>14.3</td>
@@ -59,7 +64,10 @@
 			<td class="blue">12/21/21</td><td>355</td><td>8.9</td><td>14.8</td>
 		</tr>
 	</table>
-	<h2>Sunlight Function</h2>
+	<br>
+	<img width=50% src="https://i.guim.co.uk/img/media/d9bfbb42f260aa318e379e92d1934b4f61b3d6d5/0_404_6000_3600/master/6000.jpg?width=700&quality=85&auto=format&fit=max&s=80b0f8739ef8ce005edc675a08040197"><br>
+	<caption>Visit Portland, Maine! The 15.4 summer daylight hours are only <span id="pdays" class="yellow"></span> days away!</caption>
+	<h2 id="nav-function">Sunlight Function</h2>
 	<table style="width: 100%;">
 	<td style="border: none;">
 		<h4 style="color: dodgerblue">Portland, ME</h4>
@@ -88,55 +96,63 @@
 		<span class="math" style="color: crimson;">n\left(x\right)=2.65\cos\left(\frac{2\pi}{365}\left(x-264\right)-\frac{\pi}{2}\right)+12.15</span>
 	</td>
 	</table>
-	<h2>Sunlight Graph</h2>
+	<h2 id="nav-graph">Sunlight Graph</h2>
 	<h3>Key:</h3>
 	<p>
 		<div style="background-color: dodgerblue; width: 1.6em; height: 0.8em; display: inline-block; border: 1px solid white;"></div> Portland, ME<br>
 		<div style="background-color: crimson; width: 1.6em; height: 0.8em; display: inline-block; border: 1px solid white;"></div> Melbourne, Australia
 	</p>
 	<div id="graph" style="width: 50%; height: 400px; margin: auto;"></div>
-	<h2>Reflection</h2>
+	<br>
+	<span style="color:gray">Tip: You can interact with the graph like you could with any other Desmos graph<br>(press the home button to go back)</span>
+	<br>
+	<br>
+	<img width=50% src="https://cdn.britannica.com/64/190464-050-B74E1FD9/view-central-business-district-Melbourne-train-station.jpg"><br>
+	<caption>Visit Melbourne, Australia! The 14.8 winter daylight hours are only <span id="mdays" class="yellow"></span> days away!</caption>
+	<h2 id="nav-reflection">Mathematical Reflection</h2>
 	<div id="reflection">
 		<p>
-			The amplitude of the function modeling sunlight time can be found by finding the difference between the <span class="yellow">most</span> and the <span class="blue">least</span> amount of sunlight. 
+			<strong>Amplitude:</strong> The amplitude of the function modeling sunlight time can be found by finding the difference between the <span class="yellow">most</span> and the <span class="blue">least</span> amount of sunlight. 
 			For Portland, Maine, the aplitude of the function can be found by subtracting <span class="blue">8.9</span> (the winter solstice) from <span class="yellow">15.4</span> (the summer solstice), then dividing by <span class="purple">2</span>. 
 			This results into a difference of <span class="orange">6.5</span> then divided by <span class="purple">2</span> to get an amplitude of <span class="red">3.25</span>. 
 		</p>
 		<p>
-			The inflection points of the functions are the <span class="green">spring</span> and <span class="orange">fall</span> equinox. The equinoxes are the points in which the 2nd coefficient stops increasing and starts to decrease. 
+			<strong>Inflection Points:</strong> The inflection points of the functions are the <span class="green">spring</span> and <span class="orange">fall</span> equinox. The equinoxes are the points in which the <span class="orange">change in difference</span> of <span class="yellow">daylight</span> hours stops increasing and starts to decrease. 
+			(if this were a quadratic function, it would be the second difference, but this is a sine function, so its not quite the same) 
 			This would be the change in curve, or inflection point. 
 			For Portland, Maine, the inflection points would be <span class="green">March 21st</span> and <span class="orange">September 21st</span>, the <span class="green">spring</span> and <span class="orange">fall</span> equinoxes, where both are at <span class="purple">12.2</span> hours of sunlight. 
 			The inflection points should, for the most part, not change between city to city because the equinoxes are when the Earth is tilted so that all cities get (about) <span class="yellow">12</span> hours of sunlight. 
 		</p>
 		<p>
-			The phase shift, for a sine function with positive amplitude, would be the <span class="blue">x</span> value when the <span class="red">y</span> value is at the <span class="purple">midline</span> and the graph is increasing. 
+			<strong>Phase Shift:</strong> The phase shift, for a sine function with positive amplitude, would be the <span class="blue">x</span> value when the <span class="red">y</span> value is at the <span class="purple">midline</span> and the graph is increasing. 
 			To calculate the phase shift for Portland, Maine, we can find the <span class="blue">x</span> value at the <span class="purple">midline</span> (one of the equinoxes) where the graph is <span class="green">increasing</span> (spring). 
 			This would mean that the phase shift is <span class="green">March 21st</span>, or <span class="purple">80</span> days. Because we are shifting right, the shift value in our function would be <span class="orange">-80</span>. 
 		</p>
 		<p>
-			There are two ways to calculate the <span class="yellow">midline</span>: <span class="green">adding</span> the <span class="purple">amplitude</span> to the <span class="red">minimum</span> or <span class="orange">subtracting</span> the <span class="purple">amplitude</span> from the <span class="blue">maximum</span>. 
+			<strong>Midline:</strong> There are two ways to calculate the <span class="yellow">midline</span>: <span class="green">adding</span> the <span class="purple">amplitude</span> to the <span class="red">minimum</span> or <span class="orange">subtracting</span> the <span class="purple">amplitude</span> from the <span class="blue">maximum</span>. 
 			For Melbourne, Australia, that would mean <span class="green">adding</span> <span class="purple">2.65</span> and <span class="red">9.5</span> or <span class="orange">subtracting</span> <span class="purple">2.65</span> from <span class="blue">14.8</span>.
 			This results in a vertical shift of <span class="yellow">12.15</span> for Melbourne, Australia. 
 		</p>
 		<p>
-			The positions of the two cities impact their functions in several ways. The <span class="yellow">latitude</span> of the cities impact the <span class="purple">amplitude</span> of the function.
+			<strong>Geography:</strong> The positions of the two cities impact their functions in several ways. The <span class="yellow">latitude</span> of the cities impact the <span class="purple">amplitude</span> of the function.
 			The <span class="yellow">latitude</span> can also impact the <span class="green">phase shift</span> of the functions, especially in the two hemispheres.
 			The <span class="orange">longitude</span> of the city doesn't impact the function as much, but it can change the <span class="green">phase shift</span> slightly.
 			The <span class="red">vertical shift</span> and <span class="blue">period</span> will remain constant despite the location of the city. 
 		</p>
 		<p>
-			One observation of the two graphs is that they are almost the same graph, but <span class="orange">reflected</span> over the <span class="purple">midline</span>. 
+			<strong>Observations:</strong> One observation of the two graphs is that they are almost the same graph, but <span class="orange">reflected</span> over the <span class="purple">midline</span>. 
 			This could be because the <span class="yellow">amplitudes</span> are similar because the <span class="green">latitudes</span> of the two cities are opposite to each other over the <span class="red">equator</span>. 
 			The two cities are <span class="orange">reflected</span> over the midline because the cities are in two seperate hemispheres. This would mean that one city would be in <span class="blue">winter</span> while the other is in <span class="yellow">summer</span>. 
 		</p>
 		<p>
-			To calculate the hours of <span class="yellow">sunlight</span> during my birthday, we have to first find how many days are between <span class="blue">December 31st, 2020</span> and <span class="red">June 13th, 2021</span>.
+			<strong>Birthday Daylight:</strong> To calculate the hours of <span class="yellow">sunlight</span> during my birthday, we have to first find how many days are between <span class="blue">December 31st, 2020</span> and <span class="red">June 13th, 2021</span>.
 			Afterwards, we only have to plug in the days, <span class="green">164</span>, into our two sunlight <span class="orange">equations</span>. 
 			For Portland, Maine, the equation would be <span class="math blue">3.25\sin\left(\frac{2\pi}{365}\left(164-80\right)\right)+12.15</span> which evaluates to <span class="green">15.374</span> hours of sunlight on June 13th, 2021. 
 			For Melbourne, Australia, the equation would be <span class="math red">2.65\sin\left(\frac{2\pi}{365}\left(164-264\right)\right)+12.15</span> which evaluates to <span class="orange">9.53</span> hours of sunlight on June 13th, 2021. 
 			One important observation here is that the <span class="blue">first</span> value is above <span class="purple">12.15</span> and the <span class="red">second</span> value is below <span class="purple">12.15</span>.
 		</p>
 	</div>
+	<span style="color:gray">Fun Fact: The captions of the city images automatically update</span>
 	<script src="script.js">
 	</script>
 </body>

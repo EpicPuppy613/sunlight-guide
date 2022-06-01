@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 html {
     text-align: center;
-    font-family: 'Noto Sans Math', sans-serif;
-    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(black, #220);
     color: white;
+    scroll-behavior: smooth;
+}
+body {
+    animation-name: fade;
+    animation-duration: 1s;
 }
 table {
     border-collapse: collapse;
@@ -36,4 +41,15 @@ th, td {
 #reflection {
     width: 75%;
     margin: auto;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+a {
+    color: white;
 }

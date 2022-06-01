@@ -1,5 +1,3 @@
-# html-template
+# sunlight-guide
 
-A blank html template project to start all of your web development needs
-
-(or just use a framework -_-)
+It's for school, so no peeking >:(

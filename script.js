@@ -1,8 +1,6 @@
 var elt = document.getElementById('graph');
 var calculator = Desmos.GraphingCalculator(elt, {
     expressions: false,
-    settingsMenu: false,
-    lockViewport: true,
     xAxisLabel: 'Days Since Dec. 31',
     yAxisLabel: 'Hours of Sunlight',
 });
@@ -16,7 +14,20 @@ calculator.setMathBounds({
     bottom: 7,
     top: 17
 });
+var state = calculator.getState();
+calculator.setDefaultState(state);
 
 for (const element of document.getElementsByClassName('math')) {
     MQ.StaticMath(element);
 }
+
+var now = new Date();
+var year = now.getFullYear();
+var pdate = new Date("June 21, " + year);
+var pdays = Math.floor((pdate.getTime() - now.getTime()) / 1000 / 3600 / 24);
+if (pdays < 0) pdays += 365;
+document.getElementById('pdays').innerHTML = pdays;
+var mdate = new Date("December 21, " + year);
+var mdays = Math.floor((mdate.getTime() - now.getTime()) / 1000 / 3600 / 24);
+if (mdays < 0) mdays += 365;
+document.getElementById('mdays').innerHTML = mdays;
